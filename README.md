@@ -1,8 +1,6 @@
 # Bash
 sudo apt-get install git
-cd /home/
-cd ubuntu-mate
-cd Downloads
+cd /home/ubuntu-mate/Downloads
 
 wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
@@ -20,12 +18,6 @@ sudo apt-get update; \
 
 sudo apt-get install -y dotnet-runtime-5.0
 
-mkdir Dev
-cd Dev
-git clone https://github.com/Twistt/Filemanager.git
-cd Filemanager
-cd ElectronFM
-
 # install MS Sources
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
@@ -36,4 +28,12 @@ rm -f packages.microsoft.gpg
 sudo apt install apt-transport-https
 sudo apt update
 sudo apt install code # or code-insiders
+
+cd /home/ubuntu-mate/
+mkdir Dev
+cd Dev
+git clone https://github.com/Twistt/Filemanager.git
+cd Filemanager
+cd ElectronFM
+dotnet build ElectronFM.csproj --runtime linux-x64
 
