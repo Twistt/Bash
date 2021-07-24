@@ -1,3 +1,10 @@
+# UPDATED:
+chmod +x ./fmcore
+alias name='command you want to run'
+
+build with: dotnet build --runtime ubuntu.16.04-x64
+
+
 # Bash
 sudo apt-get install git
 cd /home/ubuntu-mate/Downloads
